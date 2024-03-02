@@ -14,6 +14,7 @@ scene.onOverlapTile(SpriteKind.Player, sprites.dungeon.hazardLava0, function (sp
     game.gameOver(false)
 })
 function Start_Game () {
+    sprites.destroyAllSpritesOfKind(SpriteKind.Enemy)
     info.setLife(5)
     if (Current_Level == 1) {
         tiles.setCurrentTilemap(tilemap`level1`)
@@ -88,7 +89,9 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Skull, function (sprite, otherSp
             ........................
             ........................
             `, SpriteKind.Enemy)
-        Ghost.follow(My_Player, 80)
+        Ghost.follow(My_Player, 50)
+        Ghost.x = My_Player.x
+        Ghost.y = My_Player.y - 100
     }
     animation.runImageAnimation(
     Ghost,
