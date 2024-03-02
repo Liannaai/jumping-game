@@ -88,7 +88,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Skull, function (sprite, otherSp
             ........................
             ........................
             `, SpriteKind.Enemy)
-        Ghost.follow(My_Player, 50)
+        Ghost.follow(My_Player, 80)
     }
     animation.runImageAnimation(
     Ghost,
